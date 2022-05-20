@@ -26,7 +26,7 @@ public class TranslantikProject {
         driver.get("https://qa.translantik.com");
     }
 
-    @Test
+ /*   @Test
     public void test1Login(){
 
         String password = "UserUser123";
@@ -50,7 +50,7 @@ public class TranslantikProject {
         WebElement logoutButton = driver.findElement(By.xpath("//a[.='Logout']"));
     //    logoutButton.click();
 
-    }
+    }*/
 
     @Test
     public void test2Login(){
@@ -73,7 +73,7 @@ public class TranslantikProject {
 //        WebElement dropdownUserMenuButton = driver.findElement(By.xpath("(//a[@class='dropdown-toggle'])[1]"));
 //        dropdownUserMenuButton.click();
 
-        Select simpleDropdown = new Select(driver.findElement(By.xpath("(//a[@class='dropdown-toggle'])[1]")));
+        Select simpleDropdown = new Select(driver.findElement(By.xpath("//a[@href='javascript: void(0);']")));
         simpleDropdown.selectByVisibleText("Logout");
 
         WebElement logoutButton = driver.findElement(By.xpath("//a[.='Logout']"));
@@ -81,6 +81,7 @@ public class TranslantikProject {
 
     }
 
+/*
     @Test
     public void test3Login(){
 
@@ -106,6 +107,7 @@ public class TranslantikProject {
         logoutButton.click();
 
     }
+*/
 
 /*    @Test
     public void test4Logout(){
