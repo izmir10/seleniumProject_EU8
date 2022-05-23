@@ -1,5 +1,6 @@
 package com.cydeo.tests.day07_webtables_utilities_javafaker;
 
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -35,14 +36,17 @@ public class T1_WindowHandling {
 
         Set<String> allWindowsHandles = driver.getWindowHandles();
 
-        for (String each : allWindowsHandles) {
+/*        for (String each : allWindowsHandles) {
             driver.switchTo().window(each);
             System.out.println("Current URL: " + driver.getCurrentUrl());
 
             if (driver.getCurrentUrl().contains("etsy")){
                 break;
             }
-        }
+        }*/
+
+        BrowserUtils.switchWindowAndVerify(driver, "etsy", "Etsy");
+
         // System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
 
 
@@ -54,6 +58,10 @@ public class T1_WindowHandling {
         Assert.assertTrue(actualTitle.contains(expectedInTitle));
 
 
+
+
+
+        driver.quit();
 
     }
 
