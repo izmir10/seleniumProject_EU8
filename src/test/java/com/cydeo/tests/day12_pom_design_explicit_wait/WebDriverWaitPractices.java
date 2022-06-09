@@ -30,6 +30,7 @@ public class WebDriverWaitPractices {
         Assert.assertTrue(dynamicLoad7Page.doneMessage.isDisplayed());
 
         //4. Assert: Image is displayed
+        wait.until(ExpectedConditions.visibilityOf(dynamicLoad7Page.spongeBobImage));
         Assert.assertTrue(dynamicLoad7Page.spongeBobImage.isDisplayed());
 
     }
