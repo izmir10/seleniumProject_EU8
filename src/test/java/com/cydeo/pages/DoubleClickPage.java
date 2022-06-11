@@ -11,7 +11,7 @@ public class DoubleClickPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(id = "demo")
+    @FindBy(xpath = "//p[@id='demo']")
     public WebElement textToDoubleClick;
 
 }
